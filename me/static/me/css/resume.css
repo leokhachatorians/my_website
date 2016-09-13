@@ -1,0 +1,95 @@
+#resume {
+		padding: 0;
+	}
+
+#resume h3 {
+	color: #444;
+	font: normal 300 12px/28px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 0;
+	text-transform: uppercase;
+}
+
+#resume h3 span.underline {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #444;
+}
+
+#resume .block {
+	margin-bottom: 40px;
+}
+
+#resume .block.last {
+	margin-bottom: 0px;
+}
+
+#resume .chunk {
+	margin-bottom: 40px;
+}
+
+#resume .chunk > div {
+	padding-top: 0;
+}
+
+#resume .chunk h4 {
+	color: #442224;
+	font: bold 17px/27px 'PT Serif', Georgia, serif;
+}
+
+#resume .chunk div h4 + p {
+	color: #000;
+	font: normal 13px/24px 'PT Serif', Georgia, serif;
+	font-style: italic;
+	margin-top: 0;
+}
+
+#resume .chunk div p.desc {
+	color: #000;
+	font: normal 14px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 8px;
+	padding-top: 4px;
+}
+
+#resume .chunk div > p.date {
+	color: #555!important;
+	font: normal 13px/23px 'PT Serif', Georgia, serif;
+}
+
+#resume .chunk div > p.date span.label {
+	display: inline-block;
+	color: #bbb;
+	background: #111;
+	padding: 0;
+}
+
+
+
+.box-skill {
+	width: auto;
+	float: none;
+	margin-bottom: 40px;
+
+	position: relative;
+	/* Assign a random z-index to let jQuery check for css @media print and turn off hover effects */
+	z-index: 1726;
+}
+
+.box-skill .box-inner {
+	padding: 0;
+	background: transparent;
+	height: auto;
+}
+
+.box-skill.even .box-inner {
+	background: transparent;
+}
+
+.box-skill h4 {
+	color: #333;
+	font: bold 17px/27px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.box-skill div > p {
+	display: none;
+}

@@ -1,0 +1,224 @@
+{% extends 'me/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<main class="main-content">
+  <div id="about" class="fixed-bg bg-1 half">
+    <h1>Leo Khachatorians</h1>
+  </div>
+  <div class="fixed-bg bg-2 bg-even half">
+    <h2>la native . software developer .</h2>
+  </div>
+  <div id="resume" class="fixed-bg full">
+    <div class="container">
+      </br></br></br>
+
+      <!-- EDUCATION -->
+      <div class="block">
+        <div class="row">
+          <div class="item">
+            <div class="col-xs-2">
+              <img src="{% static 'me/images/education2.png' %}">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>Bachelor of Arts, Political Science</h4>
+              <p>California State University, Northridge</p>
+            </div>
+            <div class="col-xs-3">
+              <p class="date">
+                2014 - 2016
+                </br>
+                Northridge, CA
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </br></br>
+
+      <!-- WORK EXPERIENCE -->
+      <div class="block">
+        <div class="item">
+          <div class="row">
+            <div class="col-xs-2">
+              <img src="{% static 'me/images/work2.png' %}">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>Software Developer</h4>
+              <p>Subrigo</p>
+              <p class="desc">
+                Architect a content management system with Django which utilizes
+                multiple MySQL databases to manage system processes and commands,
+                perform YUM package actions, and also monitor system CPU/GPU usage
+                and temperature
+              </p>
+              <p class="desc">
+                Developed a SmarterMail service module for analyzing client email
+                usuage capacity for billing purposes in PHP
+              </p>
+              <p class="desc">
+                Developed an automated email system to notify individuals of database
+                replication errors and the modification of high priority system processes
+                with Python
+              </p>
+              <p class="desc">
+                Combined Celery and RabbitMQ to autonomously gather and store facial
+                image recognition data through Quividi as well as touch screen data through
+                Displax
+              </p>
+              <p class="desc">
+                Developed interactive graphs written entirely in Javascript via Plotly to allow
+                end users to create wide assortments of graphs to visualize customer interaction
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <p class="date">
+                May 2016 - August 2016
+                </br>
+                Los Angeles, CA
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>Volunteer Software Developer</h4>
+              <p>Pacific Battleship Center</p>
+              <p class="desc">
+                Developed a web based inventory management system to better track movement
+                of parts with Django backend and a Bootstrap frontend.
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <p class="date">
+                March 2016 - May 2016
+                </br>
+                San Pedro, CA
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </br>
+
+      <!-- PROJECTS -->
+      <div class="block">
+        <div class="row">
+          <div class="item">
+            <div class="col-xs-2">
+              <img src="{% static 'me/images/projects.png' %}">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>Talk</h4> 
+              <p>Python + Bluetooth + Tkinter<p>
+              <p class="desc">
+                A multi-threaded chat application utilizing Bluetooth
+              </p>
+              <p class="desc">
+                Allows user to either host, or connect to a host via their
+                Bluetooth address
+              </p>
+              <p class="desc">
+                Supports image displays and file transfers through Base64 encoded
+                data sent over RFCOMM sockets
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <a href="http://github.com/leokhachatorians/talk">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="row">
+          <div class="item">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>Organize</h4>
+              <p>Python<p>
+              <p class="desc">
+                A command line tool which automatically classifies and places files into seperate
+                folders depending on their file extension
+              </p>
+              <p class="desc">
+                Users are able to adjust which files get sorted where with a configuration manager written
+                with Urwid
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <a href="http://github.com/leokhachatorians/organize">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="row">
+          <div class="item">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>The Not Bad Pad</h4>
+              <p>C# + Xamarin<p>
+              <p class="desc">
+                Note taking application for Android made with Xamarin in C#
+              </p>
+              <p class="desc">
+                Users are able to create, update, delete, and draw notes which are stored
+                within a SQLite database
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <a href="http://github.com/leokhachatorians/the-not-bad-pad">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="row">
+          <div class="item">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+              <h4>Indeed, Pal</h4>
+              <p>Python + Flask</p>
+              <p class="desc">
+                A web-scraper built using Python which searchs and stores new job postings into
+                a SQLite database
+              </p>
+              <p class="desc">
+                Uses the web framework Flask to send out notifications of new job postings
+                via SMTP to the specified email address
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <a href="http://github.com/leokhachatorians/indeed-pal">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div id="links" class="fixed-bg bg-4 bg-even full">
+  </div>
+  <div class="fixed-bg bg-5 half">
+  </div>
+  <div class="fixed-bg bg-6 bg-even half">
+  </div>
+  <div class="fixed-bg bg-7 half">
+  </div>
+  <div class="fixed-bg bg-8 bg-even half">
+  </div>
+</main>
+
+{% endblock %}

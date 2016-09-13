@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@font-face {
+  font-family: 'Avenir Light';
+  src: url("/fonts/avenir-light.woff2") format("woff2"), url("/fonts/avenir-light.woff") format("woff"),url("/fonts/avenir-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal
+}
+
+body {
+	font-family: 'Avenir Light', sans-serif;
+	font-size: 100%;
+	font-weight: 300;
+	letter-spacing: .1rem;
+	line-height: 1.2;
+	color: #fff;
+}
+
+li a {
+	text-decoration: none;
+	color: #268bd2;
+	padding: 5px 2px;
+	border-bottom: 1px solid #268bd2;
+}
+
+li a:hover {
+	background: rgba(75%, 75%, 75%, .25);
+	border-bottom-width: 3px;
+	margin-bottom: -2px;
+}
+
+h1 {
+	font-size: 5.5rem;
+	font-weight: 300;
+	letter-spacing: .5rem;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 2.17rem;
+	font-weight: 300;
+	margin-top: 0;
+}
+
+.toggle {
+	text-decoration: none;
+	font-size: 3rem;
+	color: #333;
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	cursor: pointer;
+	transition: all .25s ease-out;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -20rem;
+	width: 15rem;
+	padding: 2.4rem;
+	background: #333;
+	transition: all .25s ease-out;
+}
+
+.sidebar  ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.sidebar  ul li {
+	margin-bottom: 2rem;
+}
+
+.sidebar  li a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	font-size: 1.6rem;
+}
+
+.sidebar  li a:hover {
+	color: rgba(255, 255, 255, 1);	
+}
+
+#sidebartoggler {
+	display: none;
+}
+
+#sidebartoggler:checked + .page-wrap .sidebar {
+	z-index: 1;
+	left: 0px;
+}
+
+#sidebartoggler:checked + .page-wrap .toggle {
+	left: 16rem;
+}
+

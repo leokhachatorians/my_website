@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-wdith, initial-scale=1, maximum-scale=1">
+
+			<link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+
+			<link rel="stylesheet" type="text/css" href="{% static 'me/css/bootstrap.min.css' %}"/>
+			<link rel="stylesheet" type="text/css" href="{% static 'me/css/reset.css' %}"/>
+			<link rel="stylesheet" type="text/css" href="{% static 'me/css/index.css' %}"/>
+			<link rel="stylesheet" type="text/css" href="{% static 'me/css/splash.css' %}"/>
+			<link rel="stylesheet" type="text/css" href="{% static 'me/css/resume.css' %}"/>
+			<script src="{% static 'me/js/modernizr.js' %}"></script>
+		</head>
+
+		<body data-spy="scroll" data-target="#nav">
+			<header class="header">
+				<nav id="nav" class="main-nav">
+					<ul class="nav">
+						<li class="active"><a href="#about">About</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#links">Links</a></li>
+						<li><a href="#0">Blog</a></li>
+					</ul>
+				</nav>
+			</header>
+			{% block content %}
+			{% endblock %}
+			<script src="{% static 'me/js/jquery-3.1.0.min.js' %}"></script>
+			<script src="{% static 'me/js/bootstrap.min.js' %}"></script>
+			<script src="{% static 'me/js/main.js' %}"></script>
+		</body>
+</html>

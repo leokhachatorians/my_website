@@ -1,0 +1,149 @@
+{% extends 'me/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<header>
+    <div class='wrapper about'>
+      <h1>Resume</h1>
+    </div>
+</header>
+
+  <div class="hidden-xs">
+    <div id="resume" class="fixed-bg full">
+      <div class="container">
+        </br></br></br>
+
+        <!-- EDUCATION -->
+        <div class="block">
+          <div class="row">
+            <div class="chunk">
+              <div class="col-xs-2">
+                <img src="{% static 'me/images/education2.png' %}">
+              </div>
+              <div class="col-xs-6 col-xs-offset-1">
+                <h4>Bachelor of Arts, Political Science</h4>
+                <p>California State University, Northridge</p>
+              </div>
+              <div class="col-xs-3">
+                <p class="date">
+                  2014 - 2016
+                  </br>
+                  Northridge, CA
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- WORK EXPERIENCE -->
+        <div class="block">
+          <div class="chunk">
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="{% static 'me/images/work2.png' %}">
+              </div>
+              <div class="col-xs-6 col-xs-offset-1">
+                <h4>Software Developer</h4>
+                <p>Subrigo</p>
+                <p class="desc">
+                  Architect a content management system with Django which utilizes
+                  multiple MySQL databases to manage system processes and commands,
+                  perform YUM package actions, and also monitor system CPU/GPU usage
+                  and temperature
+                </p>
+                <p class="desc">
+                  Developed a SmarterMail service module for analyzing client email
+                  usuage capacity for billing purposes in PHP
+                </p>
+                <p class="desc">
+                  Developed an automated email system to notify individuals of database
+                  replication errors and the modification of high priority system processes
+                  with Python
+                </p>
+                <p class="desc">
+                  Combined Celery and RabbitMQ to autonomously gather and store facial
+                  image recognition data through Quividi as well as touch screen data through
+                  Displax
+                </p>
+                <p class="desc">
+                  Developed interactive graphs written entirely in Javascript via Plotly to allow
+                  end users to create wide assortments of graphs to visualize customer interaction
+                </p>
+              </div>
+              <div class="col-xs-3">
+                <p class="date">
+                  May 2016 - August 2016
+                  </br>
+                  Los Angeles, CA
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="chunk">
+            <div class="row">
+              <div class="col-xs-2">
+              </div>
+              <div class="col-xs-6 col-xs-offset-1">
+                <h4>Volunteer Software Developer</h4>
+                <p>Pacific Battleship Center</p>
+                <p class="desc">
+                  Developed a web based inventory management system to better track movement
+                  of parts with Django backend and a Bootstrap frontend.
+                </p>
+              </div>
+              <div class="col-xs-3">
+                <p class="date">
+                  March 2016 - May 2016
+                  </br>
+                  San Pedro, CA
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- MOBILE DISPLAY -->
+  <div class='visible-xs'>
+    <div id="resume" class='fixed-bg full'>
+      <div class="col-xs-12">
+        <img src="{% static 'me/images/education2.png' %}">
+      </div>
+      <div class="col-xs-11 col-xs-offset-1">
+        <h4 style="color:#000; font-weight:bold;">BA, Political Science</h4>
+        <h5 style="color:#000; font-style:italic;">California State University, Northridge</h5>
+        <h6 style="color:#000;">2014 - 2016</h6></br></br>
+      </div>
+
+
+      <div class="col-xs-12">
+        <img src="{% static 'me/images/work2.png' %}">
+      </div>
+      <div class="col-xs-11 col-xs-offset-1">
+        <h4 style="color:#000; font-weight:bold;">Software Developer</h4>
+      </div>
+      <div class="col-xs-10 col-xs-offset-2">
+        <h5 style="color:#000; font-style:italic;">Subrigo</h5>
+        <h6 style="color:#000;">May 2016 - August 2016</h6></br>
+      </div>
+
+      <div class="col-xs-11 col-xs-offset-1">
+        <h4 style="color:#000; font-weight:bold;">Volunteer Software Developer</h4>
+      </div>
+      <div class="col-xs-10 col-xs-offset-2">
+        <h5 style="color:#000; font-style:italic;">Pacific Battleship Center</h5>
+        <h6 style="color:#000;">March 2016 - May 2016</h6></br></br>
+      </div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
