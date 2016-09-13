@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>Throw</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'throw/css/main.css' %}"></link>
+    <link rel="stylesheet" type="text/css" href="{% static 'throw/css/animate.css' %}"></link>
+    <link rel="stylesheet" type="text/css" href="{% static 'throw/css/bootstrap.min.css' %}"></link>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'throw/js/jquery310.js' %}"></script>
+    <script src="{% static 'throw/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'throw/js/main.js' %}"></script>
+  </body>
+</html>

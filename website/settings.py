@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,6 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '7%nury$f8ha4z6vdqpo&!#*4^13e#(32396)9u3*p5-p(38l!b'
+TWITTER_APP_KEY = os.environ['TWITTER_APP_KEY']
+TWITTER_APP_SEC = os.environ['TWITTER_APP_SEC']
+TWITTER_TOKEN = os.environ['TWITTER_TOKEN']
+TWITTER_TOKEN_SEC = os.environ['TWITTER_TOKEN_SEC']
+TRACK = """you, me, u, i, he, she, it, the, lol, bye, thanks, thank, hot, cold,
+        not, yes, no, cat, dog, trump, clinton,
+        best, worst, drake, rihanna, rap, rock, jazz, sexy, fire,,
+        wow, ok, lmao, rofl, yeah, nah, naw, what, wat, ah, ha, haha"""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'me.apps.MeConfig',
+    'throw.apps.ThrowConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -121,3 +131,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = ''
+BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+CELERYBEAT_SCHEDULE = {
+    'refresh': {
+        'task': 'throw.tasks.refresh',
+        'schedule': timedelta(seconds=80),
+    }
+}

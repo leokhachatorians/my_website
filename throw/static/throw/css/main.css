@@ -1,0 +1,46 @@
+html {
+	background-color: #ffefd4;
+}
+
+.tweet_bundle {
+	position: absolute;
+	max-width: 15%;
+}
+
+.screen_name {
+	color: #660033;
+}
+
+.tweet {
+	color: #003366;
+}
+
+.profile-avatar {
+	background: #d9d9d9;
+	border: 5px solid #d9d9d9;
+	border-radius: 12px;
+	box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
+	height: 200px;
+	position: relative;
+	width: 200px;
+}
+
+.profile-avatar-image,
+.profile-avatar-placeholder {
+	-moz-force-broken-image-icon: 1;
+	border-radius: 8px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#modal-reply-text {
+	resize: none;
+}
+
+.header {
+	padding-left: 100px;
+	background-color: #ffefd4;
+}

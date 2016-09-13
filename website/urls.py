@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('me.urls', namespace='me')),
+    url(r'^projects/throw', include('throw.urls', namespace='throw')),
 ]
