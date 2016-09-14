@@ -1,5 +1,5 @@
 html {
-	background-color: #ffefd4;
+	background-color: #c0c0c0;
 }
 
 .tweet_bundle {
@@ -41,6 +41,16 @@ html {
 }
 
 .header {
-	padding-left: 100px;
-	background-color: #ffefd4;
+	background-color: #044b7f;
+	box-shadow: 0 0 2px 0 #000;
+	color: #fff;
+}
+
+.header h1 {
+	letter-spacing: .5rem;
+}
+
+
+.header sub {
+	color: #b2b2b2;
 }
