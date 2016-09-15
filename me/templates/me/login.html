@@ -1,0 +1,34 @@
+{% extends 'me/base.html' %}
+{% block content %}
+
+<header>
+  <div class='wrapper about'>
+    <h1>Login</h1>
+    <p>My password is hunter22</p>
+  </div>
+</header>
+
+  <div class="wrapper about">
+    {% if messages %}
+      {% for message in messages %}
+        {% ifequal message.tags "wrong_login error" %}
+        <p class='about' role='alert'>{{ message }}</p>
+        {% endifequal %}
+      {% endfor %}
+    {% endif %}
+    <form method='post'> {% csrf_token %}
+      {% for field in login_form %}
+        <div class="row">
+          <div class="col-xs-2 hidden-xs">
+          {{ field.label_tag }}
+          </div>
+          <div class="col-xs-10">
+            {{ field }}
+          </div>
+        </div>
+      {% endfor %}
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+{% endblock %}
