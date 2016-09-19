@@ -23,8 +23,11 @@
               <li><a class="item" href='/about'>About</a></li>
               <li><a class="item" href="/resume">Resume</a></li>
               <li><a class="item" href="/projects">Projects</a></li>
-              <li><a class="item" href="#links">Links</a></li>
               <li><a class="item" href="#0">Blog</a></li>
+              {% if user.is_authenticated %}
+                <li><a class="item" href="/admin">Admin</a></li>
+                <li><a class="item" href="/logout">Logout</a></li>
+              {% endif %}
             </ul>
           </div>
         </div>

@@ -3,8 +3,9 @@ from django.contrib.auth import (
         authenticate, login as login_user,
         logout as logout_user)
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect
-from . import forms
+from . import forms, models
 
 def index(request, template='me/index.html'):
     return render(request, template)
@@ -49,3 +50,7 @@ def logout(request, template='me/login.html'):
         logout_user(request)
         messages.info(request, "Logged Out", extra_tags='login_message')
     return redirect('/')
+
+def blog(request, template='me/blog.html'):
+    queryset = models.Post.all().order_by('-id')
+    paginator = Paginator(queryset, 10)

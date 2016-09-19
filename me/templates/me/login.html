@@ -12,7 +12,7 @@
     {% if messages %}
       {% for message in messages %}
         {% ifequal message.tags "wrong_login error" %}
-        <p class='about' role='alert'>{{ message }}</p>
+        <p role='alert'>{{ message }}</p>
         {% endifequal %}
       {% endfor %}
     {% endif %}
