@@ -4,7 +4,7 @@ from django.contrib.auth import (
         logout as logout_user)
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . import forms, models
 
 def index(request, template='me/index.html'):
@@ -51,6 +51,22 @@ def logout(request, template='me/login.html'):
         messages.info(request, "Logged Out", extra_tags='login_message')
     return redirect('/')
 
-def blog(request, template='me/blog.html'):
-    queryset = models.Post.all().order_by('-id')
+def blog(request, template='me/blog_nav.html'):
+    queryset = models.Post.objects.all().order_by('-id')
     paginator = Paginator(queryset, 10)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
+    return render(request, template, {'posts':posts})
+
+def blog_post(request, template='me/blog_post.html', num='1'):
+    post = get_object_or_404(models.Post, pk=num)
+    return render(request, template, {'post':post})
+
+def new_post(request, template='me/new_post.html'):
+    return render(request, template)

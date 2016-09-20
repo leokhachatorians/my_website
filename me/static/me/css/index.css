@@ -259,7 +259,9 @@ p.description {
 	margin: 1rem 0 0.5rem;
 }
 
-a.article-details {
+
+
+.article-details {
 	text-decoration: none;
 	color #333;
 	display: block;
@@ -269,28 +271,28 @@ a.article-details {
 	transition: all .25s ease-out;
 }
 
-a.article-details:hover {
+.article-details:hover {
 	background-color: #442224;
 	color: #fff;
 	border-left: .5rem solid #7c6465;
 }
 
-a.article-details h3 {
+.article-details h3 {
 	font-size: 1.8rem;
 }
 
-a.article-details span {
+.article-details span {
 	display: inline-block;
 	color: #442224;
 	margin: 2% 0;
 	transition: color .25s ease-out;
 }
 
-a.article-details:hover span {
+.article-details:hover span {
 	color: #a3cfee;
 }
 
-a.article-details .date::before {
+.article-details .date::before {
   padding-right: 0.5rem;
 }
 
