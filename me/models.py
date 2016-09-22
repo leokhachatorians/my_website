@@ -5,4 +5,6 @@ class Post(models.Model):
     body = models.TextField()
     blurb = models.TextField()
     tags = models.TextField()
-    date_posted = models.DateTimeField()
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+

@@ -45,6 +45,7 @@ def login(request, failed_template='me/login.html', successful_template='me/inde
     return render(request, failed_template,
             {'login_form': login_form})
 
+@login_required
 def logout(request, template='me/login.html'):
     if request.user.is_authenticated():
         logout_user(request)
@@ -68,5 +69,20 @@ def blog_post(request, template='me/blog_post.html', num='1'):
     post = get_object_or_404(models.Post, pk=num)
     return render(request, template, {'post':post})
 
+@login_required
 def new_post(request, template='me/new_post.html'):
-    return render(request, template)
+    new_post_form = forms.NewPostForm()
+    if request.method == 'POST':
+        new_post_form = forms.NewPostForm(request.POST)
+        if new_post_form.is_valid():
+            title = new_post_form.cleaned_data['title']
+            body = new_post_form.cleaned_data['body']
+            blurb = new_post_form.cleaned_data['blurb']
+            tags = new_post_form.cleaned_data['tags']
+            models.Post.objects.create(
+                    title=title, body=body,
+                    blurb=blurb, tags=tags,
+                    )
+            return redirect('/blog')
+    return render(request, template,
+            {'new_post_form': new_post_form})

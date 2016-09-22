@@ -7,3 +7,22 @@
     <p>No one is gonna read this anyway.</p>
   </div>
 </header>
+
+<div class='wrapper'>
+  <div class='about'>
+    <form method='post'> {% csrf_token %}
+      {% for field in new_post_form %}
+        <div class="row">
+          {{ field.label_tag }}
+        </div>
+        <div class="row">
+          {{ field }}
+        </div>
+        </br>
+      {% endfor %}
+      <button type="submit" class="btn">Post</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
