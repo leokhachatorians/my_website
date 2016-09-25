@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'me.apps.MeConfig',
     'throw.apps.ThrowConfig',
+    'trumpify.apps.TrumpifyConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
