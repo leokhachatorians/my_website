@@ -1,11 +1,97 @@
 .profile-avatar {
 	background: #d9d9d9;
-	border: 5px solid #d9d9d9;
+	border: 2px solid #d9d9d9;
 	border-radius: 12px;
 	box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
-	height: 200px;
+	height: 48px;
 	position: relative;
-	width: 200px;
+	width: 48px;
+}
+
+.tweet-text-size {
+	font-size: 26px;
+	line-height: 32px;
+	font-weight: 300;
+	letter-spacing: .01em;
+}
+
+.tweet-bulk .stats {
+	margin-top: 10px;
+	width: 100%;
+	border-top: 1px solid #e1e8ed;
+	border-bottom: 1px solid #e1e8ed;
+}
+
+.stats li {
+	display: block;
+	float: left;
+}
+
+.stat-count a {
+	float: left;
+	color: #8899a6;
+	font-size: 10px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-top: 4px;
+	width: auto;
+}
+
+.stat-count a, a:hover, a:focus: a:active {
+	color: #0d5b73;
+}
+
+.stat-count strong {
+	font-size: 18px;
+	font-weight: 500;
+	line-height 20px;
+	color: #1b95e0;
+	display: block;
+}
+
+.stats .stat-count {
+	overflow: hidden;
+	min-width: 72px;
+}
+
+.avatar-row {
+	overflow: hidden;
+}
+
+.avatar-row a {
+	padding: 11px 0;
+	float:left;
+	margin-right: 5px;
+}
+
+.avatar-row a:first-child {
+	padding-left: 12px;
+	border-left: 1px solid #e1e8ed;
+}
+
+.face {
+	width: 24px;
+	height: 24px;
+	border-radius: 3px;
+}
+	
+
+.username {
+	font-size: 13px;
+	color: #8899a6;
+}
+
+.fullname {
+	display: block;
+	padding-top: 2px;
+	margin-top: 3px;
+	font-size: 18px;
+	line-height: 1.25;
+}
+
+.tweet-bulk {
+	width:600px;
 }
 
 .profile-avatar-image,
@@ -17,4 +103,17 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+}
+
+.client-and-actions {
+	clear: both;
+	margin-top: 10px;
+}
+
+.client-and-actions
+.metadata {
+	line-height: 24px;
+	overflow: hidden;
+	font-size: 13px;
+	color: #8899a6;
 }

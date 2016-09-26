@@ -1,0 +1,57 @@
+{% extends 'trumpify/base.html' %}
+{% load staticfiles %}
+{% block content %}
+</br></br></br></br>
+</br></br></br></br>
+<div class="row col-xs-10 col-xs-offset-2">
+  <div class="tweet-bulk">
+    <div class="row">
+      <div class="profile-avatar col-xs-6">
+        <img class="profile-avatar-image" src="{% static 'trumpify/images/trump.jpg' %}">
+      </div>
+      <strong class="fullname">
+        Donald J. Trump
+      <img src="{% static 'trumpify/images/verified.png' %}">
+      </strong>
+      <div class="username">
+        @realDonaldTrump
+      </div>
+    </div>
+    <div class="row">
+      <div class="tweet-text-size">
+        <span id="text">My name is Donald J. Trump and I approve this message.</span>
+      </div>
+    </div>
+    <div class="row stats">
+      <li class="stat-count">
+        <a>Retweets</a>
+        <strong id="retweets">5391</strong>
+      </li>
+      <li class="stat-count">
+        <a>&nbsp;&nbsp;Likes</a>
+        <strong id="likes">9483</strong>
+      </li>
+      <li class="avatar-row">
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face1.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face2.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face3.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face4.jpeg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face5.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face6.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face7.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face8.jpg' %}"></a>
+        <a class="small-icon"><img class="face" src="{% static 'trumpify/images/face9.jpeg' %}"></a>
+      </li> 
+    </div> 
+    <div class="client-and-actions">
+      <span class="metadata">
+        <span id="date">6:20 AM - 25 Sep 2016</span>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="row col-xs-10 col-xs-offset-2">
+  </br>
+  <button id="fetch_btn" class='btn' onclick="fetch();">Trumpify</button>
+</div>
+{% endblock %}
