@@ -1,9 +1,15 @@
 {% extends 'trumpify/base.html' %}
 {% load staticfiles %}
 {% block content %}
-</br></br></br></br>
-</br></br></br></br>
-<div class="row col-xs-10 col-xs-offset-2">
+<div class="row">
+  <header>
+      <h1 class="header">Trumpov Tweet</h1>
+  </header>
+</div>
+  <span class="counter"><sub>Trumpism Counter: </sub><sub id="counter">0</sub></span>
+</br></br></br>
+</br></br></br>
+<div class="row col-xs-12 col-xs-offset-2">
   <div class="tweet-bulk">
     <div class="row">
       <div class="profile-avatar col-xs-6">
@@ -48,10 +54,44 @@
         <span id="date">6:20 AM - 25 Sep 2016</span>
       </span>
     </div>
+    <div class="stream-item-footer">
+      <div class="action-list">
+        <div class="action">
+          <button class="button-icon" data-toggle="modal" data-target="#modal">
+            <img class="action-icon" src="{% static 'trumpify/images/reply.svg' %}">
+          </button>
+        </div>
+        <div class="action">
+          <button class="button-icon" data-toggle="modal" data-target="#modal">
+            <img class="action-icon" src="{% static 'trumpify/images/retweet.svg' %}">
+          </button>
+        </div>
+        <div class="action">
+          <button class="button-icon" data-toggle="modal" data-target="#modal">
+            <img class="action-icon" src="{% static 'trumpify/images/like.svg' %}"></img>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row col-xs-10 col-xs-offset-2">
+<div class="row col-xs-12 col-xs-offset-2">
   </br>
-  <button id="fetch_btn" class='btn' onclick="fetch();">Trumpify</button>
+  <button id="fetch_btn" class='btn btn-primary' onclick="fetch();">Trumpify</button>
 </div>
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Trumpov Tweet</h4>
+      </div>
+      <div class="modal-body">
+        <p>A Markov Chain experiment with none other than 'The Donald'</p>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

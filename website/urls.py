@@ -20,5 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('me.urls', namespace='me')),
     url(r'^projects/throw', include('throw.urls', namespace='throw')),
-    url(r'^projects/trumpify', include('trumpify.urls', namespace='trumpify')),
+    url(r'^projects/trumpov_tweet', include('trumpify.urls', namespace='trumpify')),
 ]
