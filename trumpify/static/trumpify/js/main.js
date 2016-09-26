@@ -1,6 +1,6 @@
 function fetch() {
 	$.ajax({
-		url: "trumpify/fetch",
+		url: "trumpov_tweet/fetch",
 		type: "GET",
 		async: true,
 
