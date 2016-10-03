@@ -44,13 +44,10 @@ li a {
 	text-decoration: none;
 	color: #268bd2;
 	padding: 5px 2px;
-	border-bottom: 1px solid #268bd2;
 }
 
 li a:hover {
-	background: rgba(75%, 75%, 75%, .25);
-	border-bottom-width: 3px;
-	margin-bottom: -2px;
+	background: rgba(32%, 32%, 33%, .85);
 }
 
 header {
@@ -106,7 +103,7 @@ p {
 	bottom: 0;
 	right: -20rem;
 	width: 12rem;
-	padding: 2.4rem;
+	padding-top: 35px;
 	background: #333;
 	transition: all .25s ease-out;
 }
@@ -124,9 +121,12 @@ p {
 	color: rgba(255, 255, 255, 0.8);
 	text-decoration: none;
 	font-size: 1.6rem;
+	display: block;
+	text-align: center;
 }
 
 .sidebar  li a:hover {
+	padding-top: 10px;
 	color: rgba(255, 255, 255, 1);	
 }
 
@@ -152,12 +152,21 @@ p {
 	color: #000;
 }
 
+.wutang:hover {
+	color: #e2a42b;
+	-moz-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	-webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
 
 .item {
 	color: #000;
 	text-decoration: none;
-	border-bottom: 0.02em solid #442224;
 	padding: 0 0.05em;
+	padding-top: 10px;
 	line-height: 1em;
 	-mox-box-shadow: inset 0 -1px 0 #442224;
 	-webkit-box-shadow: inset 0 -1px 0 #442224;
@@ -166,19 +175,22 @@ p {
 	-o-transition: all 300ms ease-in-out;
 	-webkit-transition: all 300ms ease-in-out;
 	transition: all 300ms ease-in-out;
+	-webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .item:hover {
 	color: white;
 	-moz-box-shadow: inset 0 -1.1em 0 #442224;
 	-webkit-box-shadow: inset 0 -1.1em 0 #442224;
-	box-shadow: inset 0 -1.1em 0 #442224;
-	-moz-transition-duration: 100ms;
-	-o-transition-duration: 100ms;
-	-webkit-transition-duration: 100ms;
-	transition-duration: 100ms;
+	box-shadow: inset 0 -1.1em 0 #442224;	
+	-moz-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	-webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
-
 
 .main-content {
 	height: 100%;
